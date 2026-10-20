@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta visita Cotopaxi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-primary-subtle">
+    <div class="d-flex">
+        <div class="flex-fill bg-primary py-1"></div>
+        <div class="flex-fill bg-info py-1"></div>
+        <div class="flex-fill bg-success py-1"></div>
+        <div class="flex-fill bg-warning py-1"></div>
+        <div class="flex-fill bg-danger py-1"></div>
+        <div class="flex-fill bg-secondary py-1"></div>
+        <div class="flex-fill bg-dark py-1"></div>
+    </div>
+
+    <header class="bg-dark text-white text-center py-5 position-relative overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b"
+             class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="">
+        <div class="container py-3 position-relative">
+            <div class="mb-3">
+                <div class="badge rounded-pill text-bg-primary">Naturaleza</div>
+                <div class="badge rounded-pill text-bg-info">Volcán</div>
+                <div class="badge rounded-pill text-bg-success">Senderos</div>
+                <div class="badge rounded-pill text-bg-warning">Aventura</div>
+                <div class="badge rounded-pill text-bg-danger">Cotopaxi</div>
+                <div class="badge rounded-pill text-bg-secondary">Andes</div>
+                <div class="badge rounded-pill text-bg-light">Ecuador</div>
+            </div>
+
+            <h1 class="display-4 fw-bold">Encuesta de visita al Cotopaxi</h1>
+            <p class="lead opacity-75 mb-0">Ayúdanos a conocer tu experiencia en el parque.</p>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <form id="encuesta" action="#" method="post">
+                    <div class="card bg-primary-subtle border-primary-subtle shadow-sm mb-4">
+                        <div class="card-header bg-primary text-white">
+                            <h2 class="h4 fw-bold mb-0">
+                                Tus datos
+                            </h2>
+                        </div>
+                        <div class="card-body p-4 bg-white">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="nombre" class="form-label text-primary-emphasis">Nombre completo</label>
+                                    <input type="text" class="form-control border-primary-subtle" id="nombre" name="nombre" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="nacionalidad" class="form-label text-primary-emphasis">Nacionalidad</label>
+                                    <input type="text" class="form-control border-primary-subtle" id="nacionalidad" name="nacionalidad" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="telefono" class="form-label text-primary-emphasis">Teléfono</label>
+                                    <input type="tel" class="form-control border-primary-subtle" id="telefono" name="telefono"
+                                           pattern="09[0-9]{8}" maxlength="10"
+                                           placeholder="09XXXXXXXX" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="correo" class="form-label text-primary-emphasis">Correo electrónico</label>
+                                    <input type="email" class="form-control border-primary-subtle" id="correo" name="correo" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card bg-info-subtle border-info-subtle shadow-sm mb-4">
+                        <div class="card-header bg-info text-dark">
+                            <h2 class="h4 fw-bold mb-0">
+                                Informacion de la visita
+                            </h2>
+                        </div>
+                        <div class="card-body p-4 bg-white">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="fecha" class="form-label text-info-emphasis">Fecha de visita</label>
+                                    <input type="date" class="form-control border-info-subtle" id="fecha" name="fecha" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="duracion" class="form-label text-info-emphasis">¿Cuánto duró tu visita?</label>
+                                    <select class="form-select border-info-subtle" id="duracion" name="duracion" required>
+                                        <option value="">Selecciona una opción</option>
+                                        <option>Menos de 2 horas</option>
+                                        <option>Entre 2 y 4 horas</option>
+                                        <option>Entre 4 y 6 horas</option>
+                                        <option>Todo el día</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="transporte" class="form-label text-info-emphasis">¿Qué transporte utilizaste?</label>
+                                    <select class="form-select border-info-subtle" id="transporte" name="transporte" required>
+                                        <option value="">Selecciona una opción</option>
+                                        <option>Automóvil propio</option>
+                                        <option>Bus</option>
+                                        <option>Taxi</option>
+                                        <option>Transporte turístico</option>
+                                        <option>Otro</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label text-info-emphasis">¿Con quién realizaste la visita?</label>
+                                    <div class="d-flex flex-wrap gap-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="acompanante" id="solo" value="Solo" required>
+                                            <label class="form-check-label" for="solo">Solo/a</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="acompanante" id="familia" value="Familia">
+                                            <label class="form-check-label" for="familia">Familia</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="acompanante" id="amigos" value="Amigos">
+                                            <label class="form-check-label" for="amigos">Amigos</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="acompanante" id="pareja" value="Pareja">
+                                            <label class="form-check-label" for="pareja">Pareja</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label text-info-emphasis">¿Qué atractivos visitaste?</label>
+                                    <div class="d-flex flex-wrap gap-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="volcan" name="atractivos[]" value="Volcán">
+                                            <label class="form-check-label" for="volcan">Volcán Cotopaxi</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="laguna" name="atractivos[]" value="Laguna">
+                                            <label class="form-check-label" for="laguna">Laguna</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="refugio" name="atractivos[]" value="Refugio">
+                                            <label class="form-check-label" for="refugio">Refugio</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="senderos" name="atractivos[]" value="Senderos">
+                                            <label class="form-check-label" for="senderos">Senderos</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card bg-dark-subtle border-dark-subtle shadow-sm mb-4">
+                        <div class="card-header bg-dark text-white">
+                            <h2 class="h4 fw-bold mb-0">
+                                Opinión
+                            </h2>
+                        </div>
+                        <div class="card-body p-4 bg-white">
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <label for="calificacion" class="form-label text-dark-emphasis">¿Cómo calificas tu experiencia?</label>
+                                    <select class="form-select border-dark-subtle" id="calificacion" name="calificacion" required>
+                                        <option value="">Selecciona una calificación</option>
+                                        <option value="1">1 - Mala</option>
+                                        <option value="2">2 - Regular</option>
+                                        <option value="3">3 - Buena</option>
+                                        <option value="4">4 - Muy buena</option>
+                                        <option value="5">5 - Excelente</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="recomendaciones" class="form-label text-dark-emphasis">¿Qué recomendarías para mejorar la visita?</label>
+                                    <textarea class="form-control border-dark-subtle" id="recomendaciones" name="recomendaciones" rows="4"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-dark btn-lg px-5">Enviar encuesta</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark text-white text-center py-4">
+        <p class="mb-0 opacity-50">Cuida la naturaleza y disfruta del Parque Nacional Cotopaxi.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
